@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width,initial-scale = 1.0">
+        <Title>MyBank || Services</Title>
+        <style>
+            body{
+                margin: 0;
+                background-color:azure;
+            }
+
+            header {
+                display:flex;
+                background-color: aquamarine;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            #HomepageLogo{
+                width: 75%;
+            }
+
+            nav{
+                font-size:125%;
+                display:flex;
+                background-color: aquamarine;
+                justify-content: space-between;
+                align-items: center;
+                margin-right:30px;
+            }
+
+            nav a{
+                text-decoration:none;
+                color: black;
+                padding: 35px 20px;
+            }
+
+            #LinkSignup{
+                font-size:125%;
+            }
+
+            #SignupLink{
+                color:black;
+                font-weight:bold;
+            }
+        </style>
+    </head>
+
+    
+    <body>
+        <header>
+            <a href = "index.html">
+                <img src = "Logo.png" id = "HomepageLogo">
+            </a>
+
+            <nav>
+                <a href = "Services.html">Services</a>
+                <a href = "AboutUs.html">About Us</a>
+                <a href = "SignIn.html" onclick = "AlertLogin()">Start Transaction</a>
+                <a href = "SignIn.html">Sign In</a>
+            </nav>
+        </header>
+
+        <div id = "Services">
+            <p>
+                We offer a wide range of account types and services to suit your needs. These include the following.
+            </p>
+            
+            <h2>
+                Account Types:
+            </h2>
+
+            <p>
+                <h3>
+                    Savings Account:
+                </h3>
+                Safekeep your money at our banks with a Savings Account. By starting one, you will be able to deposit or withdraw money from our bank anytime.
+                <br>
+                Grow your savings with us through time with the interest our Savings Accounts provide.
+                <br>
+                Monthly bank statements will also be provided for you to monitor your spendings and transactions.
+            </p>
+
+            <p>
+                <h3>
+                    Current Account:
+                </h3>
+                If you frequently withdraw or deposit cash into your account, a current account would be best suited for you.
+                <br>
+                It provides the same services as a savings account without interest but you will be able to create cheques for transactional purposes.
+                <br>
+                Monthly bank statements will still be provided for you.
+            </p>
+
+            <p>
+                <h3>
+                    Fixed Deposit Account:
+                </h3>
+                Interested in growing your cash with us? Place your money in a fixed deposit account!
+                <br>
+                Money will be kept in the account for a fixed term decided by you with an interest rate higher than that of a savings account.
+                <br>
+                Start early to maximise your proifits!
+                <br>
+                However, early termination may lead to a premature termination penalty alongside no interest receieved.
+                
+            </p>
+            <h4>
+                We also offer loans depending on your current financial profile.
+            </h4>
+
+            <p id = "LinkSignup">
+                Interested? Start an account at one of our branches today!
+            </p>
+        </div>
+
+        <script>
+            function AlertLogin(){
+                alert("Sign In to start a transaction!")
+            }
+        </script>
+    </body>
+</html>

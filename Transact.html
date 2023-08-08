@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width,initial-scale = 1.0">
+        <Title>MyBank || Transactions </Title>
+        <style>
+            body{
+                margin: 0;
+                background-color:azure;
+            }
+
+            header {
+                display:flex;
+                background-color: aquamarine;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            #HomepageLogo{
+                width: 75%;
+            }
+
+            nav{
+                font-size:125%;
+                display:flex;
+                background-color: aquamarine;
+                justify-content: space-between;
+                align-items: center;
+                margin-right:30px;
+            }
+
+            nav a{
+                text-decoration:none;
+                color: black;
+                padding: 35px 20px;
+            }
+
+            #StartTransaction{
+                text-align:center;
+                padding-top:100px;
+                padding-left:100px;
+                padding-right:100px;
+            }
+
+            #TransactionAct{
+                border-style:solid;
+                border-width:2.5px;
+                border-color:black;
+            }
+
+            #Confirm{
+                border-style:solid;
+                border-width:1px;
+                border-color:black;
+                background-color:rgb(175, 175, 175);
+                text-decoration:none;
+                color:black;
+            }
+
+            #DontShow{
+                color:azure;
+            }
+
+        </style>
+    </head>
+
+    
+    <body>
+        <header>
+            <a href = "SignedIn.html">
+                <img src = "Logo.png" id = "HomepageLogo">
+            </a>
+
+            <nav>
+                <a href = "SignedInServices.html">Services</a>
+                <a href = "SignedInAbout.html">About Us</a>
+                <a href = "Transact.html">Start Transaction</a>
+                <a href = "index.html" onclick = "LogOutSuccess()">Log Out</a>
+            </nav>
+        </header>
+
+        <!-- For demonstration purposes, it does not actually transact anything -->
+
+        <div id = "StartTransaction">
+            <p id = "TransactionAct">
+                
+                    <label for = "RecipientName">Recipient Name:</label>
+                    <br>
+                    <input type = "text" id = "RecipientName" name = "Name">
+                    <br>
+                    <br>
+                    <label for = "RecipientBank">Recipient Bank:</label>
+                    <br>
+                    <input type = "text" id = "RecipientBank" name = "Name">
+                    <br> 
+                    <br>
+                    <label for = "RecipientAcc">Recipient Account Number:</label>
+                    <br>
+                    <input type = "text" id = "RecipientAcc" name = "Name">
+                    <br>
+                    <br>
+                    <label for = "TransactAmt">Transaction Amount (in S$):</label>
+                    <br>
+                    <input type = "text" id = "TrnsactAmt" name = "Name">
+                    <br>
+                    <br>
+                    <br>
+                    <p id = "Confirm" onclick = "CheckConfirm()">
+                        Confirm Transaction
+                    </p>
+            </p>
+
+
+            <!-- Warning to protect customers and warn them to check transactions, and check for any possible fraudulent transaction requests from someone else -->            
+            <p id = "Warning">
+                CAUTION!
+                <br>
+                Double check all transaction before going through with it. Be careful of fraudulent transaction requests. Do not transact money to someone you do not know!
+            </p>
+        </div>
+
+
+        <!-- Confirmation JS to get the customer to confirm their transaction before going through with it -->
+        <script>
+            var confirm = 0;
+            function CheckConfirm(){
+                if (confirm < 1){
+                    alert("Are you sure the transaction is correct? Check again thouroughly and press confirm transaction again to confirm")
+                    confirm = confirm + 1;
+                } else if (confirm == 1){
+                    alert("Transaction Successful!")
+                    confirm = confirm + 1;
+                }                
+                else {
+                    alert("Transaction is already complete and being processed. Please refresh the page to start another transaction")
+                }
+            }
+
+            function LogOutSuccess(){
+                alert("Successfully logged out!")
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width,initial-scale = 1.0">
+        <Title>MyBank || Sign In</Title>
+        <style>
+            body{
+                margin: 0;
+                background-color:azure;
+            }
+
+            header {
+                display:flex;
+                background-color: aquamarine;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            #HomepageLogo{
+                width: 75%;
+            }
+
+            nav{
+                font-size:125%;
+                display:flex;
+                background-color: aquamarine;
+                justify-content: space-between;
+                align-items: center;
+                margin-right:30px;
+            }
+
+            nav a{
+                text-decoration:none;
+                color: black;
+                padding: 35px 20px;
+            }
+
+            #LoginSector{
+                display:flex;
+                flex-wrap:nowrap;
+                align-items:center;
+                gap:250px;
+                font-size:300%;
+                padding-top:100px;
+                padding-left:150px;
+                padding-right:150px;
+            }
+            
+            #LoginSector img{
+                width:250px;
+                height:250px;
+            }
+
+            #UserInfoInput{
+                font-size:50%;
+            }
+
+            #SignInButton{
+                text-decoration:none;
+                color:black;
+                border-width:2px;
+                border-style:solid;
+                border-color:black;
+                background-color:rgb(175, 175, 175);
+                font-size:150%;
+            }
+
+            #alt{
+                font-size:40%;
+                text-align:center;
+            }
+
+            #Notif{
+                text-align:center;
+            }
+
+        </style>
+    </head>
+
+    
+    <body>
+        <header>
+            <a href = "index.html">
+                <img src = "Logo.png" id = "HomepageLogo">
+            </a>
+
+            <nav>
+                <a href = "Services.html">Services</a>
+                <a href = "AboutUs.html">About Us</a>
+                <a href = "SignIn.html" onclick = "AlertLogin()">Start Transaction</a>
+                <a href = "SignIn.html">Sign In</a>
+            </nav>
+        </header>
+
+        <div id = "LoginSector">
+
+            <!-- Only allow login. KYC measures done in branch when they start an account with us -->
+
+            <p id = "UserInfoInput">
+                <label for = "Username">Username:</label>
+                <input type = "text" id = "InputUsername" name = "Name">
+                <br>
+                <label for = "Password">Password:</label>
+                <input type = "text" id = "InputPassword" name = "Name">
+                <br> 
+                <br>
+                <button id = "SignInButton" onclick = "InfoLogin()">Sign In</button>
+            </p>
+
+            <!-- For demonstration purposes, only input for a single sample user account will still be accepted 
+            
+            Username: UserJohnDoe
+
+            Password: JDPass
+
+            Input these to log in using non-singpass login
+            
+            -->
+
+            <p id = "alt">
+                Or alternatively use
+            </p>
+
+            <!-- E-KYC Measures using Singpass Login-->
+
+            <p>
+                <a href = "SignedIn.html" onclick = "LoggedIn()"><img src = "SingpassLogin.png" id = "SingpassQR"></a>
+            </p>
+            
+            
+        </div>
+
+        <!-- In-person KYC measures to prevent accounts from being used for illegal activity -->
+
+        <p id = "Notif">
+            If you do not have an account with us, visit one of our branches and start one today.
+        </p>
+
+        <script>
+
+            function InfoLogin(){
+                var correctUser = "UserJohnDoe"
+                var correctPass = "JDPass"
+
+                var inputUser = document.getElementById("InputUsername").value;
+                var inputPass = document.getElementById("InputPassword").value;
+
+                if (correctUser == inputUser && correctPass == inputPass){
+                    alert("Welcome " + inputUser);
+                    location.replace("SignedIn.html");
+                } else {
+                    alert("Invalid password/username!");
+                }
+            }
+
+            function AlertLogin(){
+                alert("Sign In to start a transaction!");
+            }
+
+            function LoggedIn(){
+                alert("Successfully Logged In!");
+            }
+        </script>
+    </body>
+</html>

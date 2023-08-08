@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width,initial-scale = 1.0">
+        <Title>MyBank || About Us</Title>
+        <style>
+            body{
+                margin: 0;
+                background-color:azure;
+            }
+
+            header {
+                display:flex;
+                background-color: aquamarine;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            #HomepageLogo{
+                width: 75%;
+            }
+
+            nav{
+                font-size:125%;
+                display:flex;
+                background-color: aquamarine;
+                justify-content: space-between;
+                align-items: center;
+                margin-right:30px;
+            }
+
+            nav a{
+                text-decoration:none;
+                color: black;
+                padding: 35px 20px;
+            }
+
+            #about{
+                padding-left:10px;
+                padding-right:10px;
+            }
+
+        </style>
+    </head>
+
+    
+    <body>
+        <header>
+            <a href = "index.html">
+                <img src = "Logo.png" id = "HomepageLogo">
+            </a>
+
+            <nav>
+                <a href = "Services.html">Services</a>
+                <a href = "AboutUs.html">About Us</a>
+                <a href = "SignIn.html" onclick = "AlertLogin()">Start Transaction</a>
+                <a href = "SignIn.html">Sign In</a>
+            </nav>
+        </header>
+
+        <!-- About page palceholder text. Will fill in with actual stories later -->
+
+        <div id = "about">
+            <h2>
+                About MyBank. Our history, vision & values
+            </h2>
+            <p>
+                <h3>
+                    Our History:
+                </h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac nibh ornare, feugiat diam luctus, sodales arcu. Etiam efficitur orci vel nisl vulputate ultrices. Nunc ultrices imperdiet velit, sit amet sollicitudin nibh vehicula a. Donec id est lorem. Vestibulum quis facilisis elit. Aliquam et commodo ex, sed vehicula sapien. Donec tellus odio, lacinia quis malesuada ac, varius et odio. Donec condimentum interdum egestas. Nunc vel tempus diam.
+                <h3>
+                    Our Values:
+                </h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac nibh ornare, feugiat diam luctus, sodales arcu. Etiam efficitur orci vel nisl vulputate ultrices. Nunc ultrices imperdiet velit, sit amet sollicitudin nibh vehicula a. Donec id est lorem. Vestibulum quis facilisis elit. Aliquam et commodo ex, sed vehicula sapien. Donec tellus odio, lacinia quis malesuada ac, varius et odio. Donec condimentum interdum egestas. Nunc vel tempus diam.
+                <h3>
+                    Our Vision:
+                </h3>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac nibh ornare, feugiat diam luctus, sodales arcu. Etiam efficitur orci vel nisl vulputate ultrices. Nunc ultrices imperdiet velit, sit amet sollicitudin nibh vehicula a. Donec id est lorem. Vestibulum quis facilisis elit. Aliquam et commodo ex, sed vehicula sapien. Donec tellus odio, lacinia quis malesuada ac, varius et odio. Donec condimentum interdum egestas. Nunc vel tempus diam.
+            </p>
+        </div>
+
+        <script>
+            function AlertLogin(){
+                alert("Sign In to start a transaction!")
+            }
+        </script>
+    </body>
+</html>

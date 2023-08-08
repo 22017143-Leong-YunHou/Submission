@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width,initial-scale = 1.0">
+        <Title>MyBank || Homepage</Title>
+        <style>
+            body{
+                margin: 0;
+                background-color:azure;
+            }
+
+            header {
+                display:flex;
+                background-color: aquamarine;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            #HomepageLogo{
+                width: 75%;
+            }
+
+            nav{
+                font-size:125%;
+                display:flex;
+                background-color: aquamarine;
+                justify-content: space-between;
+                align-items: center;
+                margin-right:30px;
+            }
+
+            nav a{
+                text-decoration:none;
+                color: black;
+                padding: 35px 20px;
+            }
+
+            #HomepageImg{
+                display:flex;
+                flex: wrap;
+                justify-content: space-between;
+                align-items: center;
+                border-radius: 4px;
+                height:500px;
+                width:1250px;
+                max-width:100%;
+            }
+            #Greeting{
+                font-size:350%;
+            }
+
+            #ServiceList{
+                font-size:150%;
+            }
+            
+            #ServiceName{
+                text-decoration:none;
+                color:#0096FF;
+            }
+
+            #ServiceName:hover{
+                color:#0095ff90;
+            }
+
+            #EventsHeader{
+                font-size:250%;
+                text-align:center;
+            }
+
+            .EventContainer{
+                display:flex;
+                flex-wrap:nowrap;
+                background-color: whitesmoke;
+            }
+            #Event{
+                width: 100px;
+                margin: 10px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href = "index.html">
+                <img src = "Logo.png" id = "HomepageLogo">
+            </a>
+
+            <nav>
+                <a href = "Services.html">Services</a>
+                <a href = "AboutUs.html">About Us</a>
+                <a href = "SignIn.html" onclick = "AlertLogin()">Start Transaction</a>
+                <a href = "SignIn.html">Sign In</a>
+            </nav>
+        </header>
+
+        <div id = "HomepageContent">
+            <div id = "HomepageTop">
+                 <img id = "HomepageImg" src = "HomepageTop.jpg">
+            </div>
+           
+            <p id = "Greeting">Welcome</p>
+            <div id = "ServiceList">
+                At our bank, we provide fast and convinient banking services to Singaporeans throughout the country. Some of our services include:
+                <br>
+                <ul>
+                    <li>Deposit taking</li>
+                    <li>Cheque services</li>
+                    <li>Loans</li>
+                </ul>
+                <br>
+                We offer a range of account types, some of which includes:
+                <br>
+                <h2 ><a id = "ServiceName" href = "Services.html">Saving Accounts</a></h2>
+                <p id = "ServiceDescription">
+                    Safekeep your money at our banks with a Savings Account. By starting one, you will be able to deposit or withdraw money from our bank anytime.
+                    <br>
+                    Grow your savings with us through time with the interest our Savings Accounts provide.
+                    <br>
+                    Monthly bank statements will also be provided for you to monitor your spendings and transactions.
+                </p>
+                <h2 id = "ServiceName"><a id = "ServiceName" href = "Services.html">Current Accounts</a></h2>
+                <p id = "ServiceDescription">
+                    If you frequently withdraw or deposit cash into your account, a current account would be best suited for you.
+                    <br>
+                    It provides the same services as a savings account without interest but you will be able to create cheques for transactional purposes.
+                    <br>
+                    Monthly bank statements will still be provided for you.
+                </p>
+                <h2 id = "ServiceName"><a id = "ServiceName" href = "Services.html">... And More</a></h2>
+
+            </div>
+<br>
+
+<br>
+            <div id = "RecentEvents">
+                <h2 id = "EventsHeader">Recent Events</h2>
+                <div class = "EventContainer">
+                    <p id = "Event">
+                        <h3>Lorem ipsum</h3>
+                        <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </p>
+                    <p id = "Event">
+                        <h3>Lorem ipsum</h3>
+                        <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </p>
+                    <p id = "Event">
+                        <h3>Lorem ipsum</h3>
+                        <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function AlertLogin(){
+                alert("Sign In to start a transaction!")
+            }
+        </script>
+    </body>
+</html>
